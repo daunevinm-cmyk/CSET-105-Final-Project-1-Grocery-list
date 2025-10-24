@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <style>
+        .crossed {
+            text-decoration: line-through;
+            color: black;
+        }
+
+        .item {
+            cursor: pointer;
+            margin: 5px 0;
+            font-size: 22px;
+            font-family: 'Comic Sans MS', 'Segoe Print', cursive;
+        }
+
+        body {
+            background-color: gray;
+        }
+
+        input[type="text"] {
+            width: 200px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #555;
+            border-radius: 8px;
+            outline: none;
+            border-color: black;
+            box-shadow: 0 0 5px black;
+        }
+
+        button {
+            width: 100px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #555;
+            border-radius: 8px;
+            outline: none;
+            border-color: black;
+            box-shadow: 0 0 5px black;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            margin-top: 100px;
+        }
+
+        .center-box {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        #items {
+            margin: 50px auto;          
+            text-align: center;
+            width: 500px;               
+            min-height: 550px;          
+            background-color: #FFFFE4;
+            border-radius: 10px;
+            padding: 20px;              
+            box-shadow: 0 0 10px black; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Grocery List Manager</h1>
+
+    <div class="center-box">
+        <input type="text" id="search" placeholder="Enter an item">
+        <button id="add" onclick="addItem()">Add</button>
+        <button id="clear" onclick="clearItems()">Clear</button>
+        <button id="filter" onclick="toggleFilter()">Show: All</button>
+    </div>
+    
+    <div id="items"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
